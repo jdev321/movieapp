@@ -7,6 +7,9 @@ ENV PYTHONUNBUFFERED 1
 
 RUN apt-get update \
     && apt-get -y install netcat gcc \
+    && apt-get -y install curl \
+    && apt-get -y install postgresql-client \
+    && apt-get -y install jq \
     && apt-get clean
 
 RUN pip install --upgrade pip
@@ -17,5 +20,8 @@ COPY . .
 
 COPY ./entrypoint.sh .
 RUN chmod +x /usr/src/app/entrypoint.sh
+
+ADD fill_movie_data.sh /bin
+
 
 ENTRYPOINT ["/usr/src/app/entrypoint.sh"]
