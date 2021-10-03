@@ -1,8 +1,8 @@
 -- upgrade --
 CREATE TABLE IF NOT EXISTS "movie" (
-    "id" SERIAL NOT NULL PRIMARY KEY,
+    "movie_id" SERIAL NOT NULL PRIMARY KEY,
     "adult" BOOL NOT NULL,
-    "movie_id" INT NOT NULL,
+    "id" INT NOT NULL,
     "original_title" TEXT NOT NULL,
     "popularity" DOUBLE PRECISION NOT NULL,
     "video" BOOL NOT NULL
