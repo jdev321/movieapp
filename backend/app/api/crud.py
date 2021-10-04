@@ -8,7 +8,6 @@ import random
 from dotenv import load_dotenv
 from datetime import datetime
 
-from typing import Union
 
 load_dotenv()
 
@@ -37,10 +36,3 @@ async def get():
     }
 
     return movie_info
-        
-    
-
-    
-
-    
-  
